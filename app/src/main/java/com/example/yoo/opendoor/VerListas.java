@@ -49,7 +49,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
 
-    //nuevo metodo
+    //Leer asistencia
     ProgressDialog PD;
     RequestQueue requestQueueVL;
     String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
