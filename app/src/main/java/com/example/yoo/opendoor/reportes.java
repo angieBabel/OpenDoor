@@ -60,6 +60,12 @@ public class reportes extends AppCompatActivity {
 
 
     }
+
+    public void alumnoVista(View ver){
+        Intent i = new Intent(this, Alumnos.class );
+
+        startActivity(i);
+    }
     public void creararch(View v){
 
         // Creamos el documento.
