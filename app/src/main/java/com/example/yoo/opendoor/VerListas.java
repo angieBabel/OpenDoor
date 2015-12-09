@@ -1,11 +1,13 @@
 package com.example.yoo.opendoor;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
+import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
 
@@ -47,10 +49,22 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
 
+    //nuevo metodo
+    ProgressDialog PD;
+    RequestQueue requestQueueLA;
+    String showURL = "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
+    ListView lista;
+    ArrayList<String> listaAlumnos = new ArrayList<String>();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_listas);
+
+        PD = new ProgressDialog(this);
+        PD.setMessage("Loading.....");
+        PD.setCancelable(false);
 
         spinnerDatos = (Spinner) findViewById(R.id.spinnerDatos);
         switchgrupo = (Switch) findViewById(R.id.switchGrp);
@@ -168,6 +182,48 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         dataAdapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerDatos.setAdapter(dataAdapterAct);
         spinnerDatos.setOnItemSelectedListener(VerListas.this);
+    }
+
+    public void ReadDataFromDB() {
+        lista = (ListView) findViewById(R.id.listAlum);
+        requestQueueLA = Volley.newRequestQueue(getApplicationContext());
+
+        PD.show();
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showURL,new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray alumnos = response.getJSONArray("alumnos");
+                    for (int i = 0; i < alumnos.length(); i++) {
+
+                        JSONObject alumno = alumnos.getJSONObject(i);
+                        String nocontrol = alumno.getString("nocontrol");
+                        String nombre = alumno.getString("nombre");
+
+                        listaAlumnos.add(nocontrol + "\n" + nombre);
+
+                    } // for loop ends
+
+                    PD.dismiss();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                PD.dismiss();
+            }
+        });
+        requestQueueLA.add(jsonObjectRequest);
+
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
+        lista.setAdapter(ad);
+
     }
 
     @Override
