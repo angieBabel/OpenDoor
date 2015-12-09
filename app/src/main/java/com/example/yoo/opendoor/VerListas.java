@@ -52,7 +52,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
     //nuevo metodo
     ProgressDialog PD;
     RequestQueue requestQueueLA;
-    String showURL = "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
     //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
     ListView lista;
     ArrayList<String> listaAlumnos = new ArrayList<String>();
@@ -184,12 +184,13 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         spinnerDatos.setOnItemSelectedListener(VerListas.this);
     }
 
-    public void ReadDataFromDB() {
+    public void ReadDataActividad() {
         lista = (ListView) findViewById(R.id.listAlum);
         requestQueueLA = Volley.newRequestQueue(getApplicationContext());
+        showLista=showLista+"?"+"nombre="+datos[0]+"&aula="+datos[1];
 
         PD.show();
-        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showURL,new Response.Listener<JSONObject>() {
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showLista,new Response.Listener<JSONObject>() {
 
             @Override
             public void onResponse(JSONObject response) {
