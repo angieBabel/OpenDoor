@@ -63,7 +63,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:onClick="Listas">
 
                 <ImageView
                     android:layout_width="70dp"
@@ -97,7 +98,8 @@
             xmlns:card_view="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            android:onClick="ArchivosPDF">
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -137,14 +139,15 @@
             android:text="Consultar lista"
             android:id="@+id/button3"
             android:layout_gravity="center_horizontal"
-            android:onClick="creararch" />
+            android:onClick="Listas" />
 
         <Button
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="Generar archivo"
             android:id="@+id/button4"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:onClick="ArchivosPDF" />
     </LinearLayout>
 
 
