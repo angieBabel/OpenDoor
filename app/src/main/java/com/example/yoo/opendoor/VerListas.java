@@ -35,14 +35,14 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
 
     //Traer datos
     RequestQueue requestQueueVLG;
-    String showURLG= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
     ArrayList<String> listaGrupo= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterGrp;
 
 
     //Traer datos
     RequestQueue requestQueueVLA;
-    String showURLA= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
 
@@ -96,16 +96,19 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
             @Override
             public void onResponse(JSONObject response)  {
                 try {
-                    JSONArray alumnos = response.getJSONArray("alumnos");
-                    for (int i = 0; i < alumnos.length(); i++) {
+                    JSONArray grupos = response.getJSONArray("grupos");
 
-                        JSONObject alumno = alumnos.getJSONObject(i);
-                        String nocontrol = alumno.getString("nocontrol");
-                        String nombre = alumno.getString("nombre");
-                        listaActividad.add(nocontrol + "\n" + nombre);
+                    for (int i = 0; i < grupos.length(); i++) {
+
+                        JSONObject grupo= grupos.getJSONObject(i);
+                        String materia = grupo.getString("materia");
+                        String aula = grupo.getString("aula");
+
+                        listaGrupo.add(materia + "\n" + aula);
+
                         //listaA[i]=idaula;
                     }
-                    dataAdapterAct.notifyDataSetChanged();
+                    dataAdapterGrp.notifyDataSetChanged();
 
                 }catch (JSONException e) {
                     e.printStackTrace();
@@ -122,7 +125,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         requestQueueVLG.add(jsonObjectRequest);
         dataAdapterGrp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaGrupo);
         dataAdapterGrp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerDatos.setAdapter(dataAdapterAct);
+        spinnerDatos.setAdapter(dataAdapterGrp);
         spinnerDatos.setOnItemSelectedListener(VerListas.this);
     }
     public  void ListaActividades(){
@@ -134,13 +137,13 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
             @Override
             public void onResponse(JSONObject response)  {
                 try {
-                    JSONArray alumnos = response.getJSONArray("alumnos");
-                    for (int i = 0; i < alumnos.length(); i++) {
+                    JSONArray actividades = response.getJSONArray("actividad");
+                    for (int i = 0; i < actividades.length(); i++) {
 
-                        JSONObject alumno = alumnos.getJSONObject(i);
-                        String nocontrol = alumno.getString("nocontrol");
-                        String nombre = alumno.getString("nombre");
-                        listaActividad.add(nocontrol + "\n" + nombre);
+                        JSONObject actividad= actividades.getJSONObject(i);
+                        String nombreact = actividad.getString("nombre");
+                        String aulaact = actividad.getString("aula");
+                        listaActividad.add(nombreact + "\n" + aulaact);
                         //listaA[i]=idaula;
                     }
                     dataAdapterAct.notifyDataSetChanged();
