@@ -10,6 +10,7 @@ import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -51,10 +52,10 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
 
     //nuevo metodo
     ProgressDialog PD;
-    RequestQueue requestQueueLA;
+    RequestQueue requestQueueVL;
     String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
-    //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
-    ListView lista;
+    String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
+    ListView listaAl;
     ArrayList<String> listaAlumnos = new ArrayList<String>();
 
     @Override
@@ -182,13 +183,16 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         dataAdapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinnerDatos.setAdapter(dataAdapterAct);
         spinnerDatos.setOnItemSelectedListener(VerListas.this);
+
     }
 
     public void ReadDataActividad() {
-        lista = (ListView) findViewById(R.id.listAlum);
-        requestQueueLA = Volley.newRequestQueue(getApplicationContext());
+        listaAlumnos.clear();
+        listaAl = (ListView) findViewById(R.id.listAlum);
+        requestQueueVL = Volley.newRequestQueue(getApplicationContext());
         showLista=showLista+"?"+"nombre="+datos[0]+"&aula="+datos[1];
 
+        Toast.makeText(VerListas.this, showLista, Toast.LENGTH_LONG).show();
         PD.show();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showLista,new Response.Listener<JSONObject>() {
 
@@ -220,10 +224,58 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
                 PD.dismiss();
             }
         });
-        requestQueueLA.add(jsonObjectRequest);
+        requestQueueVL.add(jsonObjectRequest);
 
         ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
-        lista.setAdapter(ad);
+        listaAl.setAdapter(ad);
+        showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+
+    }
+
+
+    public void ReadDataGrupo() {
+        listaAlumnos.clear();
+        listaAl = (ListView) findViewById(R.id.listAlum);
+        requestQueueVL = Volley.newRequestQueue(getApplicationContext());
+        showLista=showLista+"?"+"materia="+datos[0]+"&aula="+datos[1];
+
+        Toast.makeText(VerListas.this, showLista, Toast.LENGTH_LONG).show();
+        PD.show();
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showListaG,new Response.Listener<JSONObject>() {
+
+            @Override
+            public void onResponse(JSONObject response) {
+                try {
+                    JSONArray alumnos = response.getJSONArray("alumnos");
+                    for (int i = 0; i < alumnos.length(); i++) {
+
+                        JSONObject alumno = alumnos.getJSONObject(i);
+                        String nocontrol = alumno.getString("nocontrol");
+                        String nombre = alumno.getString("nombre");
+
+                        listaAlumnos.add(nocontrol + "\n" + nombre);
+
+                    } // for loop ends
+
+                    PD.dismiss();
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                PD.dismiss();
+            }
+        });
+        requestQueueVL.add(jsonObjectRequest);
+
+        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
+        listaAl.setAdapter(ad);
+        showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
 
     }
 
@@ -234,6 +286,12 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         datos=selection.split("\n");
         dato=datos[0];
         //Toast.makeText(AlumnoActividad.this, alumno, Toast.LENGTH_LONG).show();
+        if(switchactividad.isChecked()) {
+            ReadDataActividad();
+        }
+        if(switchgrupo.isChecked()) {
+            ReadDataGrupo();
+        }
 
     }
 
