@@ -82,6 +82,8 @@ public class Generadorpdf extends AppCompatActivity {
                     switchactividad.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaGrupos();
+                }else{
+                    spinnerDatoPDF.setEnabled(false);
                 }
             }
         });
@@ -94,6 +96,8 @@ public class Generadorpdf extends AppCompatActivity {
                     switchgrupo.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaActividades();
+                }else{
+                    spinnerDatoPDF.setEnabled(false);
                 }
             }
         });

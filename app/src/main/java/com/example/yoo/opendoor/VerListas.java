@@ -1,13 +1,181 @@
 package com.example.yoo.opendoor;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
+import android.widget.Spinner;
+import android.widget.Switch;
 
-public class VerListas extends AppCompatActivity {
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+
+public class VerListas extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    private Switch switchgrupo;
+    private Switch switchactividad;
+    Spinner spinnerDatos;
+
+    String[] datos;
+    //Datos
+    String dato;
+    String selection;
+    protected int position;
+
+    //Traer datos
+    RequestQueue requestQueueVLG;
+    String showURLG= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    ArrayList<String> listaGrupo= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterGrp;
+
+
+    //Traer datos
+    RequestQueue requestQueueVLA;
+    String showURLA= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    ArrayList<String> listaActividad= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterAct;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ver_listas);
+
+        spinnerDatos = (Spinner) findViewById(R.id.spinnerDatos);
+        switchgrupo = (Switch) findViewById(R.id.switchGrp);
+        switchactividad = (Switch) findViewById(R.id.switchAct);
+
+        spinnerDatos.setEnabled(false);
+
+        switchgrupo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+                if (isChecked) {
+                    switchactividad.setChecked(false);
+                    spinnerDatos.setEnabled(true);
+                    ListaGrupos();
+                }else{
+                    spinnerDatos.setEnabled(false);
+                }
+            }
+        });
+        switchactividad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+                if (isChecked) {
+                    switchgrupo.setChecked(false);
+                    spinnerDatos.setEnabled(true);
+                    ListaActividades();
+                } else {
+                    spinnerDatos.setEnabled(false);
+                }
+            }
+        });
+    }
+
+    public  void ListaGrupos(){
+        requestQueueVLG = Volley.newRequestQueue(getApplicationContext());
+        //listaA(la);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                showURLG,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)  {
+                try {
+                    JSONArray alumnos = response.getJSONArray("alumnos");
+                    for (int i = 0; i < alumnos.length(); i++) {
+
+                        JSONObject alumno = alumnos.getJSONObject(i);
+                        String nocontrol = alumno.getString("nocontrol");
+                        String nombre = alumno.getString("nombre");
+                        listaActividad.add(nocontrol + "\n" + nombre);
+                        //listaA[i]=idaula;
+                    }
+                    dataAdapterAct.notifyDataSetChanged();
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+
+        requestQueueVLG.add(jsonObjectRequest);
+        dataAdapterGrp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaGrupo);
+        dataAdapterGrp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatos.setAdapter(dataAdapterAct);
+        spinnerDatos.setOnItemSelectedListener(VerListas.this);
+    }
+    public  void ListaActividades(){
+        requestQueueVLA = Volley.newRequestQueue(getApplicationContext());
+        //listaA(la);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                showURLA,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)  {
+                try {
+                    JSONArray alumnos = response.getJSONArray("alumnos");
+                    for (int i = 0; i < alumnos.length(); i++) {
+
+                        JSONObject alumno = alumnos.getJSONObject(i);
+                        String nocontrol = alumno.getString("nocontrol");
+                        String nombre = alumno.getString("nombre");
+                        listaActividad.add(nocontrol + "\n" + nombre);
+                        //listaA[i]=idaula;
+                    }
+                    dataAdapterAct.notifyDataSetChanged();
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+
+        requestQueueVLA.add(jsonObjectRequest);
+        dataAdapterAct = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaActividad);
+        dataAdapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatos.setAdapter(dataAdapterAct);
+        spinnerDatos.setOnItemSelectedListener(VerListas.this);
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+       VerListas.this.position = position;
+        selection = parent.getItemAtPosition(position).toString();
+        datos=selection.split("\n");
+        dato=datos[0];
+        //Toast.makeText(AlumnoActividad.this, alumno, Toast.LENGTH_LONG).show();
+
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
     }
 }
