@@ -65,7 +65,7 @@
             android:layout_alignParentEnd="true"
             android:id="@+id/linearLayout5">
 
-<<<<<<< HEAD
+
 
 
             <TextView
@@ -130,48 +130,6 @@
                 android:text="Gruardar" />
         </LinearLayout>
     </android.support.v7.widget.CardView>
-=======
-        <Switch
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Actividades"
-            android:id="@+id/switchActividades"
-            android:layout_alignBaseline="@+id/spinnerDatoPFD"
-            android:layout_alignBottom="@+id/spinnerDatoPFD"
-            android:layout_alignLeft="@+id/btnGuardarPDF"
-            android:layout_alignStart="@+id/btnGuardarPDF"
-            android:checked="false"
-            android:textSize="22dp"
-            android:layout_marginTop="10dp"
-            android:textColor="#4e4b4b" />
 
-        <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Selecciona "
-            android:id="@+id/textView19"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center" />
-
-        <Spinner
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/spinnerDatoPFD"
-            android:layout_below="@+id/linearLayout5"
-            android:layout_centerHorizontal="true" />
-
-        <Button
-            android:layout_width="117dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/btnGuardarPDF"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="center_vertical|center_horizontal"
-            android:layout_gravity="right"
-            android:text="Gruardar" />
-    </LinearLayout>
-</android.support.v7.widget.CardView>
->>>>>>> origin/desarrollo
 
 </RelativeLayout>

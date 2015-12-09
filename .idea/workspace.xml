@@ -4,19 +4,25 @@
     <shared>
       <config />
     </shared>
+    <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+    </layouts>
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
     <list default="true" id="73e3598a-3cbd-4f2b-ac28-80aa9cf74cef" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java" />
-=======
-    <list default="true" id="ba580492-718d-462a-83c4-51658d9bf0e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
->>>>>>> origin/desarrollo
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpenDoor.iws" />
@@ -45,144 +51,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="activity_reportes.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="activity_reportes.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml">
-<<<<<<< HEAD
           <provider selected="true" editor-type-id="android-designer">
             <state />
           </provider>
           <provider editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_generadorpdf.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
-=======
->>>>>>> origin/desarrollo
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-<<<<<<< HEAD
-              <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AlumnoActividad.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/AlumnoActividad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="20" />
-=======
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> origin/desarrollo
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_ver_listas.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-<<<<<<< HEAD
-              <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generadorpdf.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.56766254">
-              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-              <folding>
-                <element signature="e#1863#1871#0" expanded="true" />
-                <element signature="e#2099#2107#0" expanded="true" />
-                <element signature="e#3537#3991#0" expanded="true" />
-                <element signature="e#3990#3991#0" expanded="true" />
-                <element signature="e#4246#5040#0" expanded="true" />
-                <element signature="e#5039#5040#0" expanded="true" />
-                <element signature="e#5042#5235#0" expanded="true" />
-                <element signature="e#5234#5235#0" expanded="true" />
-                <element signature="e#5862#6696#0" expanded="true" />
-                <element signature="e#6695#6696#0" expanded="true" />
-                <element signature="e#6698#6891#0" expanded="true" />
-                <element signature="e#6890#6891#0" expanded="true" />
-              </folding>
-=======
-              <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
-              <folding />
->>>>>>> origin/desarrollo
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerListas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-<<<<<<< HEAD
-              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="27" />
-              <folding>
-                <element signature="e#1133#1141#0" expanded="true" />
-                <element signature="e#1369#1377#0" expanded="true" />
-                <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
-                <element signature="e#3083#3877#0" expanded="true" />
-                <element signature="e#3876#3877#0" expanded="true" />
-                <element signature="e#3879#4072#0" expanded="true" />
-                <element signature="e#4071#4072#0" expanded="true" />
-                <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
-                <element signature="e#4692#5526#0" expanded="true" />
-                <element signature="e#5525#5526#0" expanded="true" />
-                <element signature="e#5528#5721#0" expanded="true" />
-                <element signature="e#5720#5721#0" expanded="true" />
-              </folding>
-=======
-              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-              <folding />
->>>>>>> origin/desarrollo
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="actividad.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="71" />
-=======
-      <file leaf-file-name="Generadorpdf.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7996485">
-              <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
->>>>>>> origin/desarrollo
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="grupos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-<<<<<<< HEAD
-              <caret line="81" column="63" selection-start-line="75" selection-start-column="20" selection-end-line="81" selection-end-column="63" />
-=======
-              <caret line="208" column="5" selection-start-line="62" selection-start-column="3" selection-end-line="208" selection-end-column="5" />
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -206,7 +82,64 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
->>>>>>> origin/desarrollo
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="activity_ver_listas.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
+          <provider selected="true" editor-type-id="android-designer">
+            <state />
+          </provider>
+          <provider editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="146" column="17" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Generadorpdf.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+              <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VerListas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="27" />
+              <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+              <folding>
+                <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
+                <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actividad.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="grupos.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="144" column="0" selection-start-line="62" selection-start-column="3" selection-end-line="144" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -1367,10 +1300,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-<<<<<<< HEAD
         <entry key="C:\Users\Yoo\AndroidStudioProjects\OpenDoor" value="4339015898839" />
-=======
->>>>>>> origin/desarrollo
         <entry key="C:\Users\Yoo\Documents\GitHub\OpenDoor" value="4339015898839" />
       </map>
     </option>
@@ -1696,7 +1626,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-<<<<<<< HEAD
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altagrupos.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_alumno_actividad.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_alumno_grupo.xml" />
@@ -1713,11 +1642,9 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Registrar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
-=======
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml" />
->>>>>>> origin/desarrollo
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java" />
       </list>
@@ -1755,13 +1682,8 @@
       <sortByType />
     </navigator>
     <panes>
-<<<<<<< HEAD
-=======
-      <pane id="Scope" />
-      <pane id="ProjectPane" />
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
->>>>>>> origin/desarrollo
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1770,59 +1692,10 @@
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
-<<<<<<< HEAD
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenDoor" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenDoor" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OpenDoor" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="opendoor" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="ProjectPane" />
       <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-=======
-        </subPane>
-      </pane>
->>>>>>> origin/desarrollo
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1972,7 +1845,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="ba580492-718d-462a-83c4-51658d9bf0e1" name="Default" comment="" />
+      <changelist id="73e3598a-3cbd-4f2b-ac28-80aa9cf74cef" name="Default" comment="" />
       <created>1449641925817</created>
       <option name="number" value="Default" />
       <updated>1449641925817</updated>
@@ -1988,34 +1861,30 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32998326" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24962178" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18229954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-=======
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
->>>>>>> origin/desarrollo
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -2035,12 +1904,77 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="130" column="23" selection-start-line="130" selection-start-column="23" selection-end-line="130" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/AlumnoActividad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="20" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="146" column="17" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="27" />
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
+          <folding>
+            <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
+            <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="144" column="0" selection-start-line="62" selection-start-column="3" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/reportes.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="70" selection-start-line="40" selection-start-column="70" selection-end-line="40" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2064,7 +1998,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2072,7 +2005,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2080,14 +2012,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alumno_grupo.xml">
-=======
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml">
->>>>>>> origin/desarrollo
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
@@ -2113,7 +2041,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
-          <folding />
+          <folding>
+            <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
+            <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2125,7 +2056,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2141,14 +2071,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
-=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/reportes.java">
->>>>>>> origin/desarrollo
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="208" column="5" selection-start-line="62" selection-start-column="3" selection-end-line="208" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2163,7 +2089,6 @@
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -2179,10 +2104,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
-=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/AlumnoActividad.java">
->>>>>>> origin/desarrollo
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
@@ -2190,38 +2112,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altaActividades.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="26" selection-end-column="68" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_alta_alumno.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-=======
-        <state vertical-scroll-proportion="-0.59753954">
-          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/AlumnoActividad.java">
->>>>>>> origin/desarrollo
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
@@ -2246,14 +2144,8 @@
       </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-<<<<<<< HEAD
           <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="97" selection-end-column="19" />
-          <folding>
-            <element signature="e#272#305#0" expanded="true" />
-            <element signature="e#330#365#0" expanded="true" />
-            <element signature="e#391#426#0" expanded="true" />
-            <element signature="e#450#483#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2297,7 +2189,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.68717045">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="31" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2305,14 +2196,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.029876977">
           <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
-=======
           <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
->>>>>>> origin/desarrollo
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altagrupos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20913884">
@@ -2333,7 +2221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3884007">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2341,7 +2228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.59753954">
           <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2349,7 +2235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.314587">
           <caret line="28" column="42" selection-start-line="28" selection-start-column="42" selection-end-line="28" selection-end-column="42" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2357,30 +2242,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1827957">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="135" column="19" selection-start-line="135" selection-start-column="19" selection-end-line="135" selection-end-column="19" />
-=======
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
->>>>>>> origin/desarrollo
-          <folding />
+          <folding>
+            <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
+            <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altaActividades.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state vertical-scroll-proportion="0.5817223">
           <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="77" />
           <folding />
@@ -2390,44 +2267,23 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/AlumnoActividad.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="20" />
-=======
-        <state vertical-scroll-proportion="0.0">
-          <caret line="208" column="5" selection-start-line="62" selection-start-column="3" selection-end-line="208" selection-end-column="5" />
->>>>>>> origin/desarrollo
+          <caret line="102" column="4" selection-start-line="102" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
         <state vertical-scroll-proportion="0.0">
           <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="71" />
-=======
-        <state vertical-scroll-proportion="0.7996485">
-          <caret line="229" column="5" selection-start-line="229" selection-start-column="5" selection-end-line="229" selection-end-column="5" />
->>>>>>> origin/desarrollo
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="81" column="63" selection-start-line="75" selection-start-column="20" selection-end-line="81" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="130" column="41" selection-start-line="130" selection-start-column="41" selection-end-line="130" selection-end-column="41" />
+          <caret line="144" column="0" selection-start-line="62" selection-start-column="3" selection-end-line="144" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2436,19 +2292,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="33" selection-end-column="27" />
+          <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
-            <element signature="e#1133#1141#0" expanded="true" />
-            <element signature="e#1369#1377#0" expanded="true" />
             <element signature="method#ListaGrupos#0;class#VerListas#0" expanded="false" />
-            <element signature="e#3083#3877#0" expanded="true" />
-            <element signature="e#3876#3877#0" expanded="true" />
-            <element signature="e#3879#4072#0" expanded="true" />
-            <element signature="e#4071#4072#0" expanded="true" />
             <element signature="method#ListaActividades#0;class#VerListas#0" expanded="false" />
-            <element signature="e#4692#5526#0" expanded="true" />
-            <element signature="e#5525#5526#0" expanded="true" />
-            <element signature="e#5528#5721#0" expanded="true" />
-            <element signature="e#5720#5721#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2461,39 +2308,47 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="16" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <caret line="141" column="19" selection-start-line="141" selection-start-column="19" selection-end-line="141" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="41" selection-start-line="146" selection-start-column="41" selection-end-line="146" selection-end-column="41" />
+          <caret line="146" column="17" selection-start-line="146" selection-start-column="17" selection-end-line="146" selection-end-column="17" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.56766254">
-          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-          <folding>
-            <element signature="e#1863#1871#0" expanded="true" />
-            <element signature="e#2099#2107#0" expanded="true" />
-            <element signature="e#3537#3991#0" expanded="true" />
-            <element signature="e#3990#3991#0" expanded="true" />
-            <element signature="e#4246#5040#0" expanded="true" />
-            <element signature="e#5039#5040#0" expanded="true" />
-            <element signature="e#5042#5235#0" expanded="true" />
-            <element signature="e#5234#5235#0" expanded="true" />
-            <element signature="e#5862#6696#0" expanded="true" />
-            <element signature="e#6695#6696#0" expanded="true" />
-            <element signature="e#6698#6891#0" expanded="true" />
-            <element signature="e#6890#6891#0" expanded="true" />
-          </folding>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="60" selection-end-column="44" />
+          <folding />
         </state>
       </provider>
     </entry>
-=======
->>>>>>> origin/desarrollo
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
