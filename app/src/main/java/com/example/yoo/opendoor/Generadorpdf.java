@@ -5,6 +5,8 @@ import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -37,7 +39,7 @@ import java.util.ArrayList;
 
 import harmony.java.awt.Color;
 
-public class Generadorpdf extends AppCompatActivity {
+public class Generadorpdf extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     private final static String NOMBRE_DIRECTORIO = "OpenDoor";
     private final static String NOMBRE_DOCUMENTO = "ListaAlumnos.pdf";
@@ -47,6 +49,25 @@ public class Generadorpdf extends AppCompatActivity {
     private Switch switchgrupo;
     private Switch switchactividad;
     Spinner spinnerDatoPDF;
+
+    String[] datos;
+    //Datos
+    String dato;
+    String selection;
+    protected int position;
+
+    //Traer datos
+    RequestQueue requestQueueVLG;
+    String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
+    ArrayList<String> listaGrupo= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterGrp;
+
+
+    //Traer datos
+    RequestQueue requestQueueVLA;
+    String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
+    ArrayList<String> listaActividad= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterAct;
 
 
     //Json
@@ -105,8 +126,85 @@ public class Generadorpdf extends AppCompatActivity {
 
     }
 
-    public  void ListaGrupos(){}
-    public  void ListaActividades(){}
+    public  void ListaGrupos(){
+        requestQueueVLG = Volley.newRequestQueue(getApplicationContext());
+        //listaA(la);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                showURLG,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)  {
+                try {
+                    JSONArray grupos = response.getJSONArray("grupos");
+
+                    for (int i = 0; i < grupos.length(); i++) {
+
+                        JSONObject grupo= grupos.getJSONObject(i);
+                        String materia = grupo.getString("materia");
+                        String aula = grupo.getString("aula");
+
+                        listaGrupo.add(materia + "\n" + aula);
+
+                        //listaA[i]=idaula;
+                    }
+                    dataAdapterGrp.notifyDataSetChanged();
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+
+        requestQueueVLG.add(jsonObjectRequest);
+        dataAdapterGrp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaGrupo);
+        dataAdapterGrp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatoPDF.setAdapter(dataAdapterGrp);
+        spinnerDatoPDF.setOnItemSelectedListener(Generadorpdf.this);
+    }
+    public  void ListaActividades(){
+        requestQueueVLA = Volley.newRequestQueue(getApplicationContext());
+        //listaA(la);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                showURLA,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)  {
+                try {
+                    JSONArray actividades = response.getJSONArray("actividad");
+                    for (int i = 0; i < actividades.length(); i++) {
+
+                        JSONObject actividad= actividades.getJSONObject(i);
+                        String nombreact = actividad.getString("nombre");
+                        String aulaact = actividad.getString("aula");
+                        listaActividad.add(nombreact + "\n" + aulaact);
+                        //listaA[i]=idaula;
+                    }
+                    dataAdapterAct.notifyDataSetChanged();
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+
+        requestQueueVLA.add(jsonObjectRequest);
+        dataAdapterAct = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaActividad);
+        dataAdapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatoPDF.setAdapter(dataAdapterAct);
+        spinnerDatoPDF.setOnItemSelectedListener(Generadorpdf.this);
+    }
 
     public void creararch(View v){
 
@@ -256,4 +354,16 @@ public class Generadorpdf extends AppCompatActivity {
         return ruta;
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+        Generadorpdf.this.position = position;
+        selection = parent.getItemAtPosition(position).toString();
+        datos=selection.split("\n");
+        dato=datos[0];
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
 }
