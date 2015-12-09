@@ -31,6 +31,7 @@ public class Alumnos extends AppCompatActivity {
     //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
 
     ArrayList<String> listaAlumnos = new ArrayList<String>();
+    ArrayAdapter<String> ad;
 
 
     ListView lista;
@@ -70,6 +71,7 @@ public class Alumnos extends AppCompatActivity {
                             listaAlumnos.add(nocontrol + "\n" + nombre);
 
                         } // for loop ends
+                        ad.notifyDataSetChanged();
 
                         PD.dismiss();
 
@@ -87,7 +89,7 @@ public class Alumnos extends AppCompatActivity {
         });
         requestQueueLA.add(jsonObjectRequest);
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
+        ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
         lista.setAdapter(ad);
 
     }

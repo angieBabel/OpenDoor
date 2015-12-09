@@ -33,6 +33,7 @@ public class actividad extends AppCompatActivity implements AdapterView.OnItemCl
 
     ArrayList<String> listaActividad = new ArrayList<String>();
     List listaAct= new ArrayList<String>();
+    ArrayAdapter<String> ad;
 
 
     ListView lista;
@@ -78,6 +79,7 @@ public class actividad extends AppCompatActivity implements AdapterView.OnItemCl
                         listaAct.add(i,nombreact);
 
                     } // for loop ends
+                    ad.notifyDataSetChanged();
 
                     PD.dismiss();
 
@@ -95,7 +97,7 @@ public class actividad extends AppCompatActivity implements AdapterView.OnItemCl
         });
         requestQueueLA.add(jsonObjectRequest);
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaActividad);
+        ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaActividad);
         lista.setAdapter(ad);
         lista.setOnItemClickListener(actividad.this);
 

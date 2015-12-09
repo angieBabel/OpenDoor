@@ -21,8 +21,10 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.4/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OpenDoor.iws" />
@@ -77,69 +79,46 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="VerListas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="actividad.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
+              <folding>
+                <element signature="e#1121#1129#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Alumnos.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="19" />
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_ver_listas.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
-          <provider selected="true" editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="52" column="7" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
+      <file leaf-file-name="grupos.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.80667835">
+              <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Generadorpdf.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Generadorpdf.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
-              <folding>
-                <element signature="e#4332#5126#0" expanded="true" />
-                <element signature="e#5125#5126#0" expanded="true" />
-                <element signature="e#5128#5321#0" expanded="true" />
-                <element signature="e#5320#5321#0" expanded="true" />
-                <element signature="e#5948#6782#0" expanded="true" />
-                <element signature="e#6781#6782#0" expanded="true" />
-                <element signature="e#6784#6977#0" expanded="true" />
-                <element signature="e#6976#6977#0" expanded="true" />
-                <element signature="e#8988#10323#0" expanded="true" />
-                <element signature="e#10322#10323#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="altagrupos.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altagrupos.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="157" column="12" selection-start-line="157" selection-start-column="12" selection-end-line="167" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VerListas.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.07381371">
-              <caret line="277" column="56" selection-start-line="277" selection-start-column="56" selection-end-line="277" selection-end-column="70" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8203#8211#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -1631,11 +1610,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/reportes.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Login.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altaActividades.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altaAlumno.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Registrar.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reportes.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml" />
@@ -1646,6 +1622,9 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java" />
       </list>
     </option>
   </component>
@@ -2038,7 +2017,6 @@
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8203#8211#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2133,7 +2111,6 @@
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8203#8211#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2332,7 +2309,6 @@
           <caret line="63" column="5" selection-start-line="63" selection-start-column="5" selection-end-line="63" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8203#8211#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2341,14 +2317,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5817223">
           <caret line="101" column="8" selection-start-line="101" selection-start-column="8" selection-end-line="101" selection-end-column="77" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="0" selection-start-line="62" selection-start-column="3" selection-end-line="144" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -2380,37 +2348,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="60" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.08963093">
-          <caret line="76" column="24" selection-start-line="76" selection-start-column="24" selection-end-line="76" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Login.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1810193">
           <caret line="30" column="42" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="3" selection-start-line="35" selection-start-column="3" selection-end-line="35" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -2434,6 +2375,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altagrupos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="157" column="12" selection-start-line="157" selection-start-column="12" selection-end-line="167" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="210" column="20" selection-start-line="210" selection-start-column="20" selection-end-line="210" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_ver_listas.xml">
       <provider selected="true" editor-type-id="android-designer">
         <state />
@@ -2445,22 +2404,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/altagrupos.java">
-      <provider selected="true" editor-type-id="text-editor">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_generadorpdf.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="157" column="12" selection-start-line="157" selection-start-column="12" selection-end-line="167" selection-end-column="9" />
+          <caret line="57" column="2" selection-start-line="57" selection-start-column="2" selection-end-line="60" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/VerListas.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/actividad.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07381371">
-          <caret line="277" column="56" selection-start-line="277" selection-start-column="56" selection-end-line="277" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="28" selection-start-line="35" selection-start-column="28" selection-end-line="35" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8203#8211#0" expanded="true" />
+            <element signature="e#1121#1129#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/Alumnos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/yoo/opendoor/grupos.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.80667835">
+          <caret line="102" column="8" selection-start-line="102" selection-start-column="8" selection-end-line="102" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

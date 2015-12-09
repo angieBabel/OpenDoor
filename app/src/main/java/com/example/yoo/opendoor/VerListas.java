@@ -10,7 +10,6 @@ import android.widget.CompoundButton;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.Switch;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -57,6 +56,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
     String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
     ListView listaAl;
     ArrayList<String> listaAlumnos = new ArrayList<String>();
+    ArrayAdapter<String> dataAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -192,7 +192,6 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         requestQueueVL = Volley.newRequestQueue(getApplicationContext());
         showLista=showLista+"?"+"nombre="+datos[0]+"&aula="+datos[1];
 
-        Toast.makeText(VerListas.this, showLista, Toast.LENGTH_LONG).show();
         PD.show();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showLista,new Response.Listener<JSONObject>() {
 
@@ -209,6 +208,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
                         listaAlumnos.add(nocontrol + "\n" + nombre);
 
                     } // for loop ends
+                    dataAdapter.notifyDataSetChanged();
 
                     PD.dismiss();
 
@@ -226,20 +226,19 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         });
         requestQueueVL.add(jsonObjectRequest);
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
-        listaAl.setAdapter(ad);
+        dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
+        listaAl.setAdapter(dataAdapter);
         showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+        listaAlumnos.clear();
 
     }
 
 
     public void ReadDataGrupo() {
-        listaAlumnos.clear();
+
         listaAl = (ListView) findViewById(R.id.listAlum);
         requestQueueVL = Volley.newRequestQueue(getApplicationContext());
-        showLista=showLista+"?"+"materia="+datos[0]+"&aula="+datos[1];
-
-        Toast.makeText(VerListas.this, showLista, Toast.LENGTH_LONG).show();
+        showListaG=showListaG+"?"+"materia="+datos[0]+"&aula="+datos[1];
         PD.show();
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showListaG,new Response.Listener<JSONObject>() {
 
@@ -256,6 +255,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
                         listaAlumnos.add(nocontrol + "\n" + nombre);
 
                     } // for loop ends
+                    dataAdapter.notifyDataSetChanged();
 
                     PD.dismiss();
 
@@ -273,8 +273,9 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         });
         requestQueueVL.add(jsonObjectRequest);
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
-        listaAl.setAdapter(ad);
+        dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
+        listaAl.setAdapter(dataAdapter);
+        listaAlumnos.clear();
         showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
 
     }
