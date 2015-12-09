@@ -1,11 +1,14 @@
 package com.example.yoo.opendoor;
 
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.CompoundButton;
 import android.widget.ListView;
+import android.widget.Spinner;
+import android.widget.Switch;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -40,6 +43,12 @@ public class Generadorpdf extends AppCompatActivity {
     private final static String NOMBRE_DOCUMENTO = "ListaAlumnos.pdf";
     private final static String ETIQUETA_ERROR = "ERROR";
 
+
+    private Switch switchgrupo;
+    private Switch switchactividad;
+    Spinner spinnerDatoPDF;
+
+
     //Json
     String user;
     View la;
@@ -54,7 +63,46 @@ public class Generadorpdf extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generadorpdf);
+
+
+        spinnerDatoPDF = (Spinner) findViewById(R.id.spinnerDatoPFD);
+        switchgrupo = (Switch) findViewById(R.id.switchGrupo);
+        switchactividad = (Switch) findViewById(R.id.switchActividades);
+
+        spinnerDatoPDF.setEnabled(false);
+
+        //switchgrupo.setChecked(true);
+        //attach a listener to check for changes in state
+        switchgrupo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+                if (isChecked) {
+                    switchactividad.setChecked(false);
+                    spinnerDatoPDF.setEnabled(true);
+                    ListaGrupos();
+                }
+            }
+        });
+        switchactividad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+                if (isChecked) {
+                    switchgrupo.setChecked(false);
+                    spinnerDatoPDF.setEnabled(true);
+                    ListaActividades();
+                }
+            }
+        });
+
+
     }
+
+    public  void ListaGrupos(){}
+    public  void ListaActividades(){}
 
     public void creararch(View v){
 
