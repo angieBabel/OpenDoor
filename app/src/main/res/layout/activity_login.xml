@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.yoo.opendoor.Login">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:id="@+id/imageView2"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/iconapp" />
+
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="244dp"
+            android:layout_weight="0.24"
+            android:gravity="center_horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center">
+
+                <EditText
+                    android:layout_width="257dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editUserL"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:layout_marginTop="25dp"
+                    android:layout_alignParentTop="true"
+                    android:backgroundTintMode="src_atop"
+                    android:textStyle="italic"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView4"
+                    android:src="@drawable/user"
+                    android:layout_above="@+id/editContraseniaL"
+                    android:layout_toLeftOf="@+id/editUserL"
+                    android:layout_toStartOf="@+id/editUserL" />
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editContraseniaL"
+                    android:layout_gravity="center_horizontal"
+                    android:password="true"
+                    android:layout_below="@+id/editUserL"
+                    android:layout_toRightOf="@+id/imageView4"
+                    android:layout_alignRight="@+id/editUserL"
+                    android:layout_alignEnd="@+id/editUserL"
+                    android:backgroundTintMode="src_atop"
+                    android:layout_marginTop="10dp"
+                    android:textAlignment="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Registrarse"
+                    android:id="@+id/tvRegister"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.06"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="27dp"
+                    android:onClick="registrar"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignRight="@+id/btnLogin"
+                    android:layout_alignEnd="@+id/btnLogin"
+                    android:layout_alignLeft="@+id/btnLogin"
+                    android:layout_alignStart="@+id/btnLogin"
+                    android:textAlignment="center" />
+
+                <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Login"
+                    android:id="@+id/btnLogin"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_weight="0.04"
+                    android:layout_above="@+id/tvRegister"
+                    android:layout_alignLeft="@+id/imageView5"
+                    android:layout_alignStart="@+id/imageView5"
+                    android:layout_marginBottom="21dp"
+                    android:layout_alignRight="@+id/editContraseniaL"
+                    android:layout_alignEnd="@+id/editContraseniaL"
+                    android:textColor="#ffffff"
+                    android:textSize="18dp"
+                    android:background="#448fc8"
+                    android:backgroundTintMode="src_atop" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:id="@+id/imageView5"
+                    android:src="@drawable/pass"
+                    android:layout_alignBottom="@+id/editContraseniaL"
+                    android:layout_toLeftOf="@+id/editContraseniaL"
+                    android:layout_toStartOf="@+id/editContraseniaL" />
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+    </LinearLayout>
+</RelativeLayout>

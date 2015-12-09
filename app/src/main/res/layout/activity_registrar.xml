@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.yoo.opendoor.Registrar">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Registro"
+                android:id="@+id/textView6"
+                android:textSize="35dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:textColor="#080808" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:id="@+id/imageView6"
+                android:src="@drawable/register"
+                android:layout_gravity="right"
+                android:layout_weight=".4" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Nombre"
+                    android:id="@+id/textView"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#3f87af" />
+
+                <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editNombreR"
+                    android:layout_toEndOf="@+id/textView" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout2"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Apellido"
+                    android:id="@+id/textView2"
+                    android:textSize="20dp"
+                    android:layout_below="@+id/textView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignBottom="@+id/editApellido"
+                    android:gravity="center_vertical"
+                    android:textColor="#3f87af" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editApellidoR"
+                    android:layout_below="@+id/textView"
+                    android:layout_toEndOf="@+id/textView2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout2"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="UserName"
+                    android:id="@+id/textView3"
+                    android:textSize="20dp"
+                    android:layout_alignBottom="@+id/editUser"
+                    android:layout_toLeftOf="@+id/editUser"
+                    android:layout_toStartOf="@+id/editUser"
+                    android:gravity="center_vertical"
+                    android:textColor="#3f87af" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editUserR"
+                    android:layout_below="@+id/editApellido"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@+id/textView2" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout3"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/linearLayout4"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:text="Contraseña"
+                    android:id="@+id/textView4"
+                    android:textSize="20dp"
+                    android:gravity="center_vertical"
+                    android:textColor="#3f87af" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editContraseniaR" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout4"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="match_parent"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="Clave"
+                    android:id="@+id/textView8"
+                    android:gravity="center_vertical"
+                    android:textColor="#3f87af" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:ems="10"
+                    android:id="@+id/edtclaveR"
+                    android:layout_gravity="center_horizontal" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registrar"
+            android:id="@+id/btnRegistrar"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#448fc8"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Terminos y Condiciones"
+            android:id="@+id/textView5"
+            android:textSize="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
