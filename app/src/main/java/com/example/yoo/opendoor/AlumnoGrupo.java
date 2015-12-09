@@ -100,6 +100,7 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
     }
 
     public void showAlumnos(){
+        listaAlumnos.clear();
         //spinner aula
         Spinner spinnerAlumAc = (Spinner) findViewById(R.id.spinnerAlGp);
         requestQueueAA = Volley.newRequestQueue(getApplicationContext());

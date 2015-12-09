@@ -102,6 +102,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
 
                 if (isChecked) {
+                    listaGrupo.clear();
                     switchactividad.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaGrupos();
@@ -116,6 +117,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
 
                 if (isChecked) {
+                    listaActividad.clear();
                     switchgrupo.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaActividades();

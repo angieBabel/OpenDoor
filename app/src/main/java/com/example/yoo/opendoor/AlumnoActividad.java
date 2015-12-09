@@ -102,6 +102,7 @@ public class AlumnoActividad extends AppCompatActivity implements AdapterView.On
 
     public void showAlumnos(){
         //spinner aula
+        listaAlumnos.clear();
         Spinner spinnerAlumAc = (Spinner) findViewById(R.id.spinnerAlAc);
         requestQueueAA = Volley.newRequestQueue(getApplicationContext());
         //listaA(la);

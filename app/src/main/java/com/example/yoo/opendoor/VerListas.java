@@ -1,7 +1,6 @@
 package com.example.yoo.opendoor;
 
 import android.os.Bundle;
-<<<<<<< HEAD
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
@@ -12,12 +11,6 @@ import android.widget.Switch;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
-=======
-import android.widget.ArrayAdapter;
-import android.widget.Spinner;
-
-import com.android.volley.Request;
->>>>>>> origin/desarrollo
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -71,6 +64,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
             public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
 
                 if (isChecked) {
+                    listaGrupo.clear();
                     switchactividad.setChecked(false);
                     spinnerDatos.setEnabled(true);
                     ListaGrupos();
@@ -85,6 +79,7 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
                 if (isChecked) {
+                    listaActividad.clear();
                     switchgrupo.setChecked(false);
                     spinnerDatos.setEnabled(true);
                     ListaActividades();
