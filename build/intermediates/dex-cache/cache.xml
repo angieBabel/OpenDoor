@@ -2,11 +2,81 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-375fe7a98a78a574c65cea052797cb5e349f0f8f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d0dda274b703dd9c5bb056867649d22b4171ae7d">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-1db32f4fdbd5845594a5d4d5df21571a28c4ae8f.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="39ae02ce40c3ac828abbf780ce0ff5d7a28b7d6a">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-a0c9f0d3034b22c191574acfdf8f035dd8714ee0.jar" />
+    </item>
+    <item
         jar="C:\Users\Yoo\AndroidStudioProjects\OpenDoor\app\libs\droidText.0.4.jar"
         jumboMode="false"
         revision="23.0.1"
         sha1="b2c14c76d9f558463af239be951367e61ea1c270">
         <dex dex="C:\Users\Yoo\AndroidStudioProjects\OpenDoor\app\build\intermediates\pre-dexed\debug\droidText.0.4-6e2b585b96ca943c7c41451c4cd49cb84c91c91d.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-c755a1237fc88f4a5f35f34ca80e808cce3bd3d4.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.0.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4356e230a981d1bbf047d848b91bc0d9b7c5bacc">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-a6b382e12dc199970768c1edb6e86ddcbd11dd3e.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\libs\droidText.0.4.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="b2c14c76d9f558463af239be951367e61ea1c270">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\droidText.0.4-3a5d9f5d1e73f0af6b6da07ed40c6e70f4e51c8c.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.1\jars\libs\internal_impl-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\internal_impl-23.0.1-ab9c39ed466f7a7caeca09538d6c71b42e6f8912.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.0.1\support-annotations-23.0.1.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\support-annotations-23.0.1-84e26cfac46dcea8375bb1f19127bcbdce2bf1e9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\.gradle\caches\modules-2\files-2.1\com.mcxiaoke.volley\library\1.0.18\38da306aafee11459cd935a01d2c92a98dc670a4\library-1.0.18.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\library-1.0.18-a7420f3a61e27b3b9024299187c7536c7a18214b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.1"
+        sha1="4477ea44f5ec5ad064022a22691732d7638ff197">
+        <dex dex="C:\Users\Yoo\Documents\GitHub\OpenDoor\app\build\intermediates\pre-dexed\debug\classes-21d0331c1a068096ad087bd0e8c5854e2d833e6f.jar" />
     </item>
 
 </items>

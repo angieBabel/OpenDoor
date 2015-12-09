@@ -1,14 +1,21 @@
 package com.example.yoo.opendoor;
 
+
+import android.os.Bundle;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CompoundButton;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Switch;
 
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -30,37 +37,121 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import harmony.java.awt.Color;
 
-public class Generadorpdf extends AppCompatActivity {
+public class Generadorpdf extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+
+    private final static String NOMBRE_DIRECTORIO = "OpenDoor";
+    private final static String NOMBRE_DOCUMENTO = "ListaAlumnos.pdf";
+    private final static String ETIQUETA_ERROR = "ERROR";
+
+
+    private Switch switchgrupo;
+    private Switch switchactividad;
+    Spinner spinnerDatoPDF;
+
+    String[] datos;
+    //Datos
+    String dato;
+    String selection;
+    protected int position;
+
+    //Traer datos
+    RequestQueue requestQueueVLG;
+    String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
+    ArrayList<String> listaGrupo= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterGrp;
+
+
+    //Traer datos
+    RequestQueue requestQueueVLA;
+    String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
+    ArrayList<String> listaActividad= new ArrayList<String>();
+    ArrayAdapter<String> dataAdapterAct;
+
+
+    //Json
+    String user;
+    View la;
+    RequestQueue requestQueueLA;
+    String showURL = "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
+
+    ArrayList<String> listaAlumnos = new ArrayList<String>();
+    ListView lista;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_generadorpdf);
+
+
+        spinnerDatoPDF = (Spinner) findViewById(R.id.spinnerDatoPFD);
+        switchgrupo = (Switch) findViewById(R.id.switchGrupo);
+        switchactividad = (Switch) findViewById(R.id.switchActividades);
+
+        spinnerDatoPDF.setEnabled(false);
+
+        //switchgrupo.setChecked(true);
+        //attach a listener to check for changes in state
+        switchgrupo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+                if (isChecked) {
+                    listaGrupo.clear();
+                    switchactividad.setChecked(false);
+                    spinnerDatoPDF.setEnabled(true);
+                    ListaGrupos();
+                }else{
+                    spinnerDatoPDF.setEnabled(false);
+                }
+            }
+        });
+        switchactividad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
+
+                if (isChecked) {
+                    listaActividad.clear();
+                    switchgrupo.setChecked(false);
+                    spinnerDatoPDF.setEnabled(true);
+                    ListaActividades();
+                }else{
+                    spinnerDatoPDF.setEnabled(false);
+                }
+            }
+        });
+
+
     }
-    public void showAlumnos(){
-        //spinner aula
-        Spinner spinnerAlumAc = (Spinner) findViewById(R.id.spinnerAlAc);
-        requestQueueAA = Volley.newRequestQueue(getApplicationContext());
+
+    public  void ListaGrupos(){
+        requestQueueVLG = Volley.newRequestQueue(getApplicationContext());
         //listaA(la);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
-                showURL,new Response.Listener<JSONObject>() {
+                showURLG,new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response)  {
                 try {
-                    JSONArray alumnos = response.getJSONArray("alumnos");
-                    for (int i = 0; i < alumnos.length(); i++) {
+                    JSONArray grupos = response.getJSONArray("grupos");
 
-                        JSONObject alumno = alumnos.getJSONObject(i);
-                        String nocontrol = alumno.getString("nocontrol");
-                        String nombre = alumno.getString("nombre");
-                        listaAlumnos.add(nocontrol + "\n" + nombre);
+                    for (int i = 0; i < grupos.length(); i++) {
+
+                        JSONObject grupo= grupos.getJSONObject(i);
+                        String materia = grupo.getString("materia");
+                        String aula = grupo.getString("aula");
+
+                        listaGrupo.add(materia + "\n" + aula);
+
                         //listaA[i]=idaula;
                     }
-                    dataAdapter.notifyDataSetChanged();
+                    dataAdapterGrp.notifyDataSetChanged();
 
                 }catch (JSONException e) {
                     e.printStackTrace();
@@ -74,11 +165,49 @@ public class Generadorpdf extends AppCompatActivity {
             }
         });
 
-        requestQueueAA.add(jsonObjectRequest);
-        dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaAlumnos);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerAlumAc.setAdapter(dataAdapter);
-        spinnerAlumAc.setOnItemSelectedListener(AlumnoActividad.this);
+        requestQueueVLG.add(jsonObjectRequest);
+        dataAdapterGrp = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaGrupo);
+        dataAdapterGrp.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatoPDF.setAdapter(dataAdapterGrp);
+        spinnerDatoPDF.setOnItemSelectedListener(Generadorpdf.this);
+    }
+    public  void ListaActividades(){
+        requestQueueVLA = Volley.newRequestQueue(getApplicationContext());
+        //listaA(la);
+
+        JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
+                showURLA,new Response.Listener<JSONObject>() {
+            @Override
+            public void onResponse(JSONObject response)  {
+                try {
+                    JSONArray actividades = response.getJSONArray("actividad");
+                    for (int i = 0; i < actividades.length(); i++) {
+
+                        JSONObject actividad= actividades.getJSONObject(i);
+                        String nombreact = actividad.getString("nombre");
+                        String aulaact = actividad.getString("aula");
+                        listaActividad.add(nombreact + "\n" + aulaact);
+                        //listaA[i]=idaula;
+                    }
+                    dataAdapterAct.notifyDataSetChanged();
+
+                }catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                System.out.append(error.getMessage());
+
+            }
+        });
+
+        requestQueueVLA.add(jsonObjectRequest);
+        dataAdapterAct = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,listaActividad);
+        dataAdapterAct.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerDatoPDF.setAdapter(dataAdapterAct);
+        spinnerDatoPDF.setOnItemSelectedListener(Generadorpdf.this);
     }
 
     public void creararch(View v){
@@ -228,4 +357,18 @@ public class Generadorpdf extends AppCompatActivity {
 
         return ruta;
     }
+
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
+        Generadorpdf.this.position = position;
+        selection = parent.getItemAtPosition(position).toString();
+        datos=selection.split("\n");
+        dato=datos[0];
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
+
+    }
+
 }

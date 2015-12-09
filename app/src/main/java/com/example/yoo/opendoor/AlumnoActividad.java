@@ -38,7 +38,7 @@ public class AlumnoActividad extends AppCompatActivity implements AdapterView.On
 
     //Traer datos
     RequestQueue requestQueueAA;
-    String showURL= "http://192.168.1.68:8080/OpenDoor/showAlumnos.php";
+    String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
     ArrayList<String> listaAlumnos= new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
     String[] listaA;
@@ -102,6 +102,7 @@ public class AlumnoActividad extends AppCompatActivity implements AdapterView.On
 
     public void showAlumnos(){
         //spinner aula
+        listaAlumnos.clear();
         Spinner spinnerAlumAc = (Spinner) findViewById(R.id.spinnerAlAc);
         requestQueueAA = Volley.newRequestQueue(getApplicationContext());
         //listaA(la);

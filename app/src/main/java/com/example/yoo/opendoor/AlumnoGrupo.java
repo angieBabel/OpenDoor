@@ -44,7 +44,7 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
 
     //Inserta
     RequestQueue requestQueueAlmAct;
-    String insertURL= "http://192.168.1.68:8080/OpenDoor/insertAlumnoGrupo.php";
+    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumnoGrupo.php";
     //String insertURL= "http://192.168.78.67:8080/OpenDoor/insertAlumno.php";
     View v;
 
@@ -100,6 +100,7 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
     }
 
     public void showAlumnos(){
+        listaAlumnos.clear();
         //spinner aula
         Spinner spinnerAlumAc = (Spinner) findViewById(R.id.spinnerAlGp);
         requestQueueAA = Volley.newRequestQueue(getApplicationContext());

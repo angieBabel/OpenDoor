@@ -28,11 +28,12 @@ import java.util.List;
 
 public class actividad extends AppCompatActivity implements AdapterView.OnItemClickListener {
     RequestQueue requestQueueLA;
-    String showURL = "http://192.168.1.68:8080/OpenDoor/showActividades.php";
+    String showURL = "http://192.168.1.66:8080/OpenDoor/showActividades.php";
     //String showURL= "http://192.168.78.67:8080/OpenDoor/showGrupos.php";
 
     ArrayList<String> listaActividad = new ArrayList<String>();
     List listaAct= new ArrayList<String>();
+    ArrayAdapter<String> ad;
 
 
     ListView lista;
@@ -78,6 +79,7 @@ public class actividad extends AppCompatActivity implements AdapterView.OnItemCl
                         listaAct.add(i,nombreact);
 
                     } // for loop ends
+                    ad.notifyDataSetChanged();
 
                     PD.dismiss();
 
@@ -95,7 +97,7 @@ public class actividad extends AppCompatActivity implements AdapterView.OnItemCl
         });
         requestQueueLA.add(jsonObjectRequest);
 
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaActividad);
+        ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaActividad);
         lista.setAdapter(ad);
         lista.setOnItemClickListener(actividad.this);
 

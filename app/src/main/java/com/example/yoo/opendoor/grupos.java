@@ -31,10 +31,11 @@ public class grupos extends AppCompatActivity implements AdapterView.OnItemClick
     String user;
 
     RequestQueue requestQueueLA;
-    String showURL = "http://192.168.1.68:8080/OpenDoor/showGrupos.php";
+    String showURL = "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
     //String showURL= "http://192.168.78.67:8080/OpenDoor/showGrupos.php";
 
     ArrayList<String> listaGrupos = new ArrayList<String>();
+    ArrayAdapter<String> ad;
 
 
     ListView lista;
@@ -82,6 +83,7 @@ public class grupos extends AppCompatActivity implements AdapterView.OnItemClick
                         listaGrupos.add(materia + "\n" + aula);
 
                     } // for loop ends
+                    ad.notifyDataSetChanged();
 
                     PD.dismiss();
 
@@ -98,7 +100,7 @@ public class grupos extends AppCompatActivity implements AdapterView.OnItemClick
             }
         });
         requestQueueLA.add(jsonObjectRequest);
-        ArrayAdapter<String> ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaGrupos);
+        ad = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaGrupos);
         lista.setAdapter(ad);
         lista.setOnItemClickListener(grupos.this);
 
