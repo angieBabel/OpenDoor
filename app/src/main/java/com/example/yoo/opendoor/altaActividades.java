@@ -32,7 +32,7 @@ public class altaActividades extends AppCompatActivity implements AdapterView.On
     String aulaAct=" ";
     Button registrarAct;
     RequestQueue requestQueueA;
-    String insertURL= "http://192.168.1.68:8080/OpenDoor/insertActividad.php";
+    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertActividad.php";
     //String insertURL= "http://192.168.78.67:8080/OpenDoor/insertActividad.php";
     View v;
 

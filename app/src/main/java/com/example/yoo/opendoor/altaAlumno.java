@@ -27,7 +27,7 @@ public class altaAlumno extends AppCompatActivity implements AdapterView.OnItemS
     Button registrarA;
     protected ArrayAdapter<CharSequence> adapter;
     RequestQueue requestQueueA;
-    String insertURL= "http://192.168.1.68:8080/OpenDoor/insertAlumno.php";
+    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumno.php";
     //String insertURL= "http://192.168.78.67:8080/OpenDoor/insertAlumno.php";
     View v;
     protected int position;

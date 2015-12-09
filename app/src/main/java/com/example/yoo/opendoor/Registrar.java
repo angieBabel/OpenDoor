@@ -26,7 +26,7 @@ public class Registrar extends AppCompatActivity {
     EditText nombre,apellido,username,contrasenia,clave;
     Button registrar;
     RequestQueue requestQueue;
-    String insertURL= "http://192.168.1.68:8080/OpenDoor/insertUser.php";
+    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertUser.php";
     //String insertURL= "http://192.168.78.67:8080/OpenDoor/insertUser.php";
     View vista;
 
