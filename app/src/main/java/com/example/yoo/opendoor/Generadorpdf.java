@@ -59,7 +59,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     String selection;
     protected int position;
 
-    //Traer datos
+    //Traer datos Grupo
     RequestQueue requestQueueVLG;
     //String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
     String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
@@ -67,7 +67,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     ArrayAdapter<String> dataAdapterGrp;
 
 
-    //Traer datos
+    //Traer datos Alumnos
     RequestQueue requestQueueVLA;
     //String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
     String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
@@ -90,7 +90,6 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
     //String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
     String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
-    ListView listaAl;
     ArrayList<String> listaAlum = new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
 
@@ -106,19 +105,16 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
 
         spinnerDatoPDF.setEnabled(false);
 
-        //switchgrupo.setChecked(true);
-        //attach a listener to check for changes in state
         switchgrupo.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     listaGrupo.clear();
                     switchactividad.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaGrupos();
-                }else{
+                } else {
                     spinnerDatoPDF.setEnabled(false);
                 }
             }
@@ -126,25 +122,21 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
         switchactividad.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
 
             @Override
-            public void onCheckedChanged(CompoundButton buttonView,boolean isChecked) {
-
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     listaActividad.clear();
                     switchgrupo.setChecked(false);
                     spinnerDatoPDF.setEnabled(true);
                     ListaActividades();
-                }else{
+                } else {
                     spinnerDatoPDF.setEnabled(false);
                 }
             }
         });
-
-
     }
 
     public  void ListaGrupos(){
         requestQueueVLG = Volley.newRequestQueue(getApplicationContext());
-        //listaA(la);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 showURLG,new Response.Listener<JSONObject>() {
@@ -158,10 +150,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
                         JSONObject grupo= grupos.getJSONObject(i);
                         String materia = grupo.getString("materia");
                         String aula = grupo.getString("aula");
-
-                        listaGrupo.add(materia + "\n" + aula);
-
-                        //listaA[i]=idaula;
+                        listaGrupo.add(materia + "\t" + aula);
                     }
                     dataAdapterGrp.notifyDataSetChanged();
 
@@ -183,9 +172,9 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
         spinnerDatoPDF.setAdapter(dataAdapterGrp);
         spinnerDatoPDF.setOnItemSelectedListener(Generadorpdf.this);
     }
+
     public  void ListaActividades(){
         requestQueueVLA = Volley.newRequestQueue(getApplicationContext());
-        //listaA(la);
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 showURLA,new Response.Listener<JSONObject>() {
@@ -198,7 +187,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
                         JSONObject actividad= actividades.getJSONObject(i);
                         String nombreact = actividad.getString("nombre");
                         String aulaact = actividad.getString("aula");
-                        listaActividad.add(nombreact + "\n" + aulaact);
+                        listaActividad.add(nombreact + "\t" + aulaact);
                         //listaA[i]=idaula;
                     }
                     dataAdapterAct.notifyDataSetChanged();
@@ -258,34 +247,32 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
                     Font.BOLD, Color.BLUE);
             documento.add(new Paragraph("Lista de Alumnos", font));
 
-            documento.add(new Paragraph(""));
+            documento.add(new Paragraph("\n"));
 
             final PdfPTable tabla = new PdfPTable(2);
-            showLista=showLista+"?"+"nombre="+datos[0]+"&aula="+datos[1];
-            requestQueuePDF = Volley.newRequestQueue(getApplicationContext());
+            showLista=showLista+"?"+"nombre="+datos[0]+"&aula="+datos[1];// Envio de datos
 
+            requestQueuePDF = Volley.newRequestQueue(getApplicationContext());
 
             JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showLista,new Response.Listener<JSONObject>() {
 
                 @Override
                 public void onResponse(JSONObject response) {
                     try {
-
                         JSONArray alumnos = response.getJSONArray("alumnos");
-
                         for (int i = 0; i < alumnos.length(); i++) {
 
                             JSONObject alumno = alumnos.getJSONObject(i);
                             String nocontrol = alumno.getString("nocontrol");
-                            //Toast.makeText(this, nocontrol, Toast.LENGTH_LONG).show();
                             String nombre = alumno.getString("nombre");
-                            tabla.addCell(nocontrol);
-
                             listaAlum.add(nocontrol + "\n" + nombre);
+
+                            /*tabla.addCell(nocontrol);
+                            tabla.addCell(nombre);*/
 
                         } // for loop ends
                         dataAdapter.notifyDataSetChanged();
-
+                        PD.dismiss();
 
                     } catch (JSONException e) {
                         e.printStackTrace();
@@ -300,20 +287,23 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
                 }
             });
             requestQueuePDF.add(jsonObjectRequest);
+            dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlum);
 
-            /*dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlum);
-            listaAl.setAdapter(dataAdapter);*/
-            listaAlum.clear();
-            //showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
-            showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
-
+            showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
             // Insertamos una tabla.
-            /*PdfPTable tabla = new PdfPTable(2);
-            for (int i = 0; i < 15; i++) {
-                tabla.addCell("Celda " + i);
+            PdfPTable tablita = new PdfPTable(2);
+            for (int i = 0; i < 16; i++) {
+                tablita.addCell("Celda " + i);
 
-            }*/
-            documento.add(tabla);
+            }
+
+            PdfPTable tablon = new PdfPTable(2);
+            for (int i = 0; i < listaAlum.size(); i++) {
+                tablon.addCell(listaAlum.get(i));
+
+            }
+            documento.add(tablon);
+            documento.add(tablita);
 
             // Agregar marca de agua
             /*font = FontFactory.getFont(FontFactory.HELVETICA, 42, Font.BOLD,
@@ -338,121 +328,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-    public void CreatePDFGrupo(){
 
-        // Creamos el documento.
-
-        Document documento = new Document();
-        // Creamos el fichero con el nombre que deseemos.
-        try {
-
-            // Creamos el fichero con el nombre que deseemos.
-            File f = crearFichero(NOMBRE_DOCUMENTO);
-
-            // Creamos el flujo de datos de salida para el fichero donde
-            // guardaremos el pdf.
-            FileOutputStream ficheroPdf = new FileOutputStream(
-                    f.getAbsolutePath());
-
-            // Asociamos el flujo que acabamos de crear al documento.
-            PdfWriter writer = PdfWriter.getInstance(documento, ficheroPdf);
-
-            // Incluimos el píe de página y una cabecera
-            HeaderFooter cabecera = new HeaderFooter(new Phrase(
-                    "Instituto Tecnológico de Colima"), false);
-            HeaderFooter pie = new HeaderFooter(new Phrase(
-                    user), false);
-
-            documento.setHeader(cabecera);
-            documento.setFooter(pie);
-
-            // Abrimos el documento.
-            documento.open();
-
-
-            // Añadimos un título con una fuente personalizada.
-            Font font = FontFactory.getFont(FontFactory.HELVETICA, 16,
-                    Font.BOLD, Color.BLUE);
-            documento.add(new Paragraph("Lista de Alumnos", font));
-
-            documento.add(new Paragraph(""));
-
-            final PdfPTable tabla = new PdfPTable(2);
-            requestQueueLA = Volley.newRequestQueue(getApplicationContext());
-
-
-            JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,showURL,new Response.Listener<JSONObject>() {
-
-                @Override
-                public void onResponse(JSONObject response) {
-                    try {
-
-                        JSONArray alumnos = response.getJSONArray("alumnos");
-
-                        for (int i = 0; i < alumnos.length(); i++) {
-
-                            JSONObject alumno = alumnos.getJSONObject(i);
-                            String nocontrol = alumno.getString("nocontrol");
-                            //Toast.makeText(this, nocontrol, Toast.LENGTH_LONG).show();
-                            String nombre = alumno.getString("nombre");
-                            String apellido = alumno.getString("apellido");
-                            if (i==0){
-                                tabla.addCell("No. Control");
-                            }
-                            if (i==1){
-                                tabla.addCell("Nombre");
-                            }
-                            tabla.addCell(nocontrol);
-                            tabla.addCell(nombre+" "+ apellido);
-
-                            listaAlumnos.add(nocontrol + "\n" + nombre);
-
-                        } // for loop ends
-
-
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }, new Response.ErrorListener() {
-
-                @Override
-                public void onErrorResponse(VolleyError error) {
-                }
-            });
-            requestQueueLA.add(jsonObjectRequest);
-
-            // Insertamos una tabla.
-            /*PdfPTable tabla = new PdfPTable(2);
-            for (int i = 0; i < 15; i++) {
-                tabla.addCell("Celda " + i);
-
-            }*/
-            documento.add(tabla);
-
-            // Agregar marca de agua
-            /*font = FontFactory.getFont(FontFactory.HELVETICA, 42, Font.BOLD,
-                    Color.GRAY);
-            ColumnText.showTextAligned(writer.getDirectContentUnder(),
-                    Element.ALIGN_CENTER, new Paragraph(
-                            "amatellanes.wordpress.com", font), 297.5f, 421,
-                    writer.getPageNumber() % 2 == 1 ? 45 : -45);*/
-
-        } catch (DocumentException e) {
-
-            Log.e(ETIQUETA_ERROR, e.getMessage());
-
-        } catch (IOException e) {
-
-            Log.e(ETIQUETA_ERROR, e.getMessage());
-
-        } finally {
-
-            // Cerramos el documento.
-            documento.close();
-        }
-    }
 
     private File crearFichero(String nombreDocumento) throws IOException {
         File ruta = getRuta();
@@ -491,19 +367,23 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     public void onItemSelected(AdapterView<?> parent, View view, int i, long l) {
         Generadorpdf.this.position = position;
         selection = parent.getItemAtPosition(position).toString();
-        datos=selection.split("\n");
+        datos=selection.split("\t");
         dato=datos[0];
-        if(switchactividad.isChecked()) {
-            CreatePDFActi();
-        }
-        if(switchgrupo.isChecked()) {
-            CreatePDFGrupo();
-        }
+
     }
 
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    public void GuardarPDF(View view){
+        if(switchactividad.isChecked()) {
+            CreatePDFActi();
+        }
+        if(switchgrupo.isChecked()) {
+            //CreatePDFGrupo();
+        }
     }
 
 }
