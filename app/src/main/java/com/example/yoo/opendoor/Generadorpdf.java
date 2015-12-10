@@ -61,6 +61,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
 
     //Traer datos
     RequestQueue requestQueueVLG;
+    //String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
     String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
     ArrayList<String> listaGrupo= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterGrp;
@@ -68,6 +69,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
 
     //Traer datos
     RequestQueue requestQueueVLA;
+    //String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
     String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
@@ -77,14 +79,16 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     String user;
     View la;
     RequestQueue requestQueueLA;
-    String showURL = "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
-    //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
+    //String showURL = "http://192.168.43.64:8080/OpenDoor/showAlumnos.php";
+    String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
     ArrayList<String> listaAlumnos = new ArrayList<String>();
     ListView lista;
 
     ProgressDialog PD;
     RequestQueue requestQueuePDF;
+    //String showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
     String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+    //String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
     String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
     ListView listaAl;
     ArrayList<String> listaAlum = new ArrayList<String>();
@@ -300,6 +304,7 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
             /*dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlum);
             listaAl.setAdapter(dataAdapter);*/
             listaAlum.clear();
+            //showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
             showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
 
             // Insertamos una tabla.

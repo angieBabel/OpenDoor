@@ -28,6 +28,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
     public  String username= "username";
     public  String idusuario= "idusuario";
 
+    //String LOGIN_URL= "http://192.168.43.64:8080/OpenDoor/login.php";
     String LOGIN_URL= "http://192.168.1.66:8080/OpenDoor/login.php";
     View view;
 

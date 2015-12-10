@@ -27,8 +27,8 @@ public class Alumnos extends AppCompatActivity {
 
     View la;
     RequestQueue requestQueueLA;
-    String showURL = "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
-    //String showURL= "http://192.168.78.67:8080/OpenDoor/showAlumnos.php";
+    //String showURL = "http://192.168.43.64:8080/OpenDoor/showAlumnos.php";
+    String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
 
     ArrayList<String> listaAlumnos = new ArrayList<String>();
     ArrayAdapter<String> ad;

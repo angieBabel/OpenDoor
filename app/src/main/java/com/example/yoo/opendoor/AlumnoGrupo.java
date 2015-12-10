@@ -37,15 +37,17 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
 
     //Traer datos
     RequestQueue requestQueueAA;
+    //String showURL= "http://192.168.43.64:8080/OpenDoor/showAlumnos.php";
     String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+
     ArrayList<String> listaAlumnos= new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
     String[] listaA;
 
     //Inserta
     RequestQueue requestQueueAlmAct;
-    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumnoGrupo.php";
-    //String insertURL= "http://192.168.78.67:8080/OpenDoor/insertAlumno.php";
+    //String insertURL= "http://192.168.43.64:8080/OpenDoor/insertAlumnoGrupo.php";
+    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumno.php";
     View v;
 
     @Override
@@ -95,6 +97,7 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
         /*RequestQueue requestQueue = Volley.newRequestQueue(AlumnoActividad.this);
         requestQueue.add(request);*/
         requestQueueAlmAct.add(request);
+        listaActividades(v);
         //listaAlumno(v);
 
     }
@@ -153,5 +156,11 @@ public class AlumnoGrupo extends AppCompatActivity implements AdapterView.OnItem
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {
 
+    }
+
+    private void listaActividades(View vis) {
+        finish();
+        Intent i = new Intent(this, actividad.class );
+        startActivity(i);
     }
 }
