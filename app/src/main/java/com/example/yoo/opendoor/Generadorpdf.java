@@ -61,16 +61,16 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
 
     //Traer datos Grupo
     RequestQueue requestQueueVLG;
-    //String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
-    String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
+    String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
+    //String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
     ArrayList<String> listaGrupo= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterGrp;
 
 
     //Traer datos Alumnos
     RequestQueue requestQueueVLA;
-    //String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
-    String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
+    String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
+    //String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
 
@@ -79,17 +79,17 @@ public class Generadorpdf extends AppCompatActivity implements AdapterView.OnIte
     String user;
     View la;
     RequestQueue requestQueueLA;
-    //String showURL = "http://192.168.43.64:8080/OpenDoor/showAlumnos.php";
-    String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
+    String showURL = "http://192.168.43.64:8080/OpenDoor/showAlumnos.php";
+    //String showURL= "http://192.168.1.66:8080/OpenDoor/showAlumnos.php";
     ArrayList<String> listaAlumnos = new ArrayList<String>();
     ListView lista;
 
     ProgressDialog PD;
     RequestQueue requestQueuePDF;
-    //String showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
-    String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
-    //String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
-    String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
+    String showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
+    //String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+    String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
+    //String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
     ArrayList<String> listaAlum = new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
 

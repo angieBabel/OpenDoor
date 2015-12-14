@@ -28,8 +28,8 @@ import java.util.List;
 
 public class actividad extends AppCompatActivity implements AdapterView.OnItemClickListener {
     RequestQueue requestQueueLA;
-    //String showURL = "http://192.168.43.64:8080/OpenDoor/showActividades.php";
-    String showURL= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
+    String showURL = "http://192.168.43.64:8080/OpenDoor/showActividades.php";
+    //String showURL= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
 
     ArrayList<String> listaActividad = new ArrayList<String>();
     List listaAct= new ArrayList<String>();

@@ -38,27 +38,27 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
 
     //Traer datos
     RequestQueue requestQueueVLG;
-    //String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
-    String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
+    String showURLG= "http://192.168.43.64:8080/OpenDoor/showGrupos.php";
+    //String showURLG= "http://192.168.1.66:8080/OpenDoor/showGrupos.php";
     ArrayList<String> listaGrupo= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterGrp;
 
 
     //Traer datos
     RequestQueue requestQueueVLA;
-    //String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
-    String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
+    String showURLA= "http://192.168.43.64:8080/OpenDoor/showActividades.php";
+    //String showURLA= "http://192.168.1.66:8080/OpenDoor/showActividades.php";
     ArrayList<String> listaActividad= new ArrayList<String>();
     ArrayAdapter<String> dataAdapterAct;
 
     //Leer asistencia
     ProgressDialog PD;
     RequestQueue requestQueueVL;
-    //String showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
-    String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+    String showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
+    //String showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
 
-    //String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
-    String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
+    String showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
+    //String showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
     ListView listaAl;
     ArrayList<String> listaAlumnos = new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
@@ -233,8 +233,8 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
 
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
         listaAl.setAdapter(dataAdapter);
-        //showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
-        showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
+        showLista = "http://192.168.43.64:8080/OpenDoor/showLista.php";
+        //showLista = "http://192.168.1.66:8080/OpenDoor/showLista.php";
         listaAlumnos.clear();
 
     }
@@ -282,8 +282,8 @@ public class VerListas extends AppCompatActivity implements AdapterView.OnItemSe
         dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, listaAlumnos);
         listaAl.setAdapter(dataAdapter);
         listaAlumnos.clear();
-        //showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
-        showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
+        showListaG = "http://192.168.43.64:8080/OpenDoor/showListaG.php";
+        //showListaG = "http://192.168.1.66:8080/OpenDoor/showListaG.php";
 
     }
 

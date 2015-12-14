@@ -36,8 +36,8 @@ public class altagrupos extends AppCompatActivity implements AdapterView.OnItemS
     String aula, semestre;
     Button registrarA;
     RequestQueue requestQueueA;
-    //String insertURL= "http://192.168.43.64:8080/OpenDoor/insertGrupo.php";
-    String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumno.php";
+    String insertURL= "http://192.168.43.64:8080/OpenDoor/insertGrupo.php";
+    //String insertURL= "http://192.168.1.66:8080/OpenDoor/insertAlumno.php";
     View v;
     protected ArrayAdapter<CharSequence> adapter;
     private String selection;
@@ -45,8 +45,8 @@ public class altagrupos extends AppCompatActivity implements AdapterView.OnItemS
 
     //Traer datos
     RequestQueue requestQueueAA;
-    //String showURL= "http://192.168.43.64:8080/OpenDoor/showAula.php";
-    String showURL= "http://192.168.1.66:8080/OpenDoor/showAula.php";
+    String showURL= "http://192.168.43.64:8080/OpenDoor/showAula.php";
+    //String showURL= "http://192.168.1.66:8080/OpenDoor/showAula.php";
     ArrayList<String> salon= new ArrayList<String>();
     ArrayAdapter<String> dataAdapter;
     RequestQueue requestQueueAG;
